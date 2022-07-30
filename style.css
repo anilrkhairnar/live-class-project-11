@@ -1,0 +1,406 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  background: #f8f8fa;
+}
+/* ------------------------------ */
+
+/* ------ GLOBAL buttons -------- */
+.btn-bordered {
+  position: relative;
+  width: 200px;
+  height: 55px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: -webkit-linear-gradient(#0a80cf, #6cc0f8);
+  -webkit-background-clip: text;
+  color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.btn-bordered::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 7px;
+  padding: 2px;
+  background: linear-gradient(to top, #0a80cf, #6cc0f8);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.btn {
+  width: 200px;
+  height: 55px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: linear-gradient(to top, #0a80cf, #6cc0f8);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 2px 9px 20px -10px #7e7e7f;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.btn-bordered-simple {
+  width: 170px;
+  height: 55px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+/* ------------------------------ */
+
+/* ---------- NAVBAR ------------ */
+nav {
+  margin: 30px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  width: 100px;
+}
+nav .list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+nav .list .list-item {
+  margin: 0 20px;
+  cursor: pointer;
+}
+nav .list .list-item a {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #7e7e7f;
+  transition: 0.2s ease-in-out;
+}
+nav .list .list-item.active a {
+  color: #000;
+}
+/* ------------------------------ */
+
+/* ---- GLOBAL section  ------ */
+
+section {
+  padding: 150px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+section .col {
+  width: 36rem;
+}
+section h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+section p {
+  margin: 30px 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: #7e7e7f;
+}
+section .img img {
+  width: 35rem;
+}
+/* ------------------------------ */
+
+/* ----- services section ------- */
+.services {
+  padding: 150px 120px;
+  display: flex;
+  flex-direction: column;
+}
+.services .services-top {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.services .services-top h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+.services .services-top p {
+  width: 60rem;
+  font-size: 16px;
+  line-height: 30px;
+  color: #7e7e7f;
+}
+.services .services-bottom {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.services .services-bottom .service {
+  margin: 0 50px 100px 0;
+}
+.services .services-bottom .service h2 {
+  margin: 20px 0;
+  font-size: 25px;
+}
+.services .services-bottom .service p {
+  font-size: 14px;
+  line-height: 30px;
+  color: #7e7e7f;
+}
+/* ------------------------------ */
+
+/* ----- pricing section ------- */
+.pricing {
+  padding: 80px 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to top, #0a80cf, #6cc0f8);
+}
+.pricing h1 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+}
+.pricing .plans {
+  margin: 80px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pricing .plans .plan {
+  margin: 0 10px;
+  width: 375px;
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+.pricing .plans .plan.active,
+.pricing .plans .plan:hover {
+  box-shadow: 0px 5px 29px -9px #000000;
+}
+.pricing .plans .plan .plan-headings {
+  padding: 35px;
+  width: 100%;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+.pricing .plans .plan.active .plan-headings,
+.pricing .plans .plan:hover .plan-headings {
+  background: #353535;
+  color: #fff;
+}
+.pricing .plans .plan h2 {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 600;
+}
+.pricing .plans .plan p {
+  color: #b4b4b4;
+}
+.pricing .plans .plan .plan-benefits {
+  margin: 50px 0 100px;
+  padding: 0 35px;
+}
+.pricing .plans .plan .plan-benefits ul li {
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.pricing .plans .plan .plan-benefits ul li i {
+  margin: 0 20px 0 0;
+  font-size: 20px;
+  color: #0ad7a1;
+}
+.pricing .plans .plan .plan-benefits ul li h4 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.pricing .plans .plan .plan-price {
+  padding: 0 35px 35px;
+}
+.pricing .plans .plan .plan-price,
+.pricing .plans .plan .plan-price div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pricing .plans .plan .plan-price div h2 {
+  margin: 5px 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+.pricing .plans .plan .plan-price div p {
+  color: #7e7e7f;
+}
+.pricing .plans .plan .plan-price div h2 span {
+  color: #7e7e7f;
+}
+.pricing .plans .plan .plan-price button {
+  margin: 30px 0 0;
+}
+
+/* ------------------------------ */
+
+/* ----- Feedback section ------- */
+
+.feedback {
+  padding: 150px 120px;
+}
+.feedback .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.feedback .heading h1 {
+  font-size: 45px;
+  font-weight: 600;
+}
+.feedback .heading p {
+  margin: 30px 0;
+  width: 45rem;
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
+  color: #7e7e7f;
+}
+.feedback .cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.feedback .cards .card {
+  margin: 25px 25px 0 0;
+  padding: 35px;
+  border: 1px solid #e2e2e2;
+  border-radius: 15px;
+  transition: 0.2s ease-in-out;
+}
+.feedback .cards .card.active,
+.feedback .cards .card:hover {
+  background: #fff;
+  box-shadow: 0px 5px 15px -17px #000000;
+}
+.feedback .cards .card p {
+  margin: 0 0 25px;
+}
+.feedback .cards .card .author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.feedback .cards .card .author span {
+  margin: 0 15px 0 0;
+  width: 80px;
+  height: 80px;
+  background: #d9d9d9;
+  border-radius: 40px;
+}
+.feedback .cards .card .author div h4 {
+  margin: 0 0 10px;
+}
+.feedback .cards .card .author div p {
+  font-size: 16px;
+  color: #7e7e7f;
+}
+/* ---------------------------------- */
+
+/* ----- Registration section ------- */
+
+.registration {
+  padding: 100px 120px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.registration img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.registration div {
+  width: 36rem;
+}
+.registration div h1 {
+  margin: 0 0 25px;
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+}
+.registration div p {
+  font-size: 16px;
+  color: #e2e2e2;
+}
+/* ----------------------------- */
+
+/* ----- Footer section ------- */
+footer {
+  padding: 150px 120px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .logo {
+  margin: 0 0 25px;
+  width: 100px;
+}
+footer p {
+  width: 20rem;
+  font-size: 16px;
+  color: #7e7e7f;
+}
+footer .footer-right {
+  display: flex;
+}
+footer .footer-right .list {
+  width: 140px;
+  margin: 0 0 0 80px;
+}
+footer .footer-right .list h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+footer .footer-right .list li {
+  margin: 20px 0 0;
+  list-style: none;
+}
+footer .footer-right .list li a {
+  margin: 30px 0 0;
+  font-size: 14px;
+  text-decoration: none;
+  color: #7e7e7f;
+}
+
+footer .footer-right .list ul {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-right .list ul li img {
+  width: 30px;
+}
