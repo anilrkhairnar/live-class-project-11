@@ -69,6 +69,32 @@ body {
 }
 /* ------------------------------ */
 
+/* ---- GLOBAL section  ------ */
+
+section {
+  padding: 150px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+section .col {
+  max-width: 36rem;
+}
+section h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+section p {
+  margin: 30px 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: #7e7e7f;
+}
+section .img img {
+  width: 35rem;
+}
+/* ------------------------------ */
+
 /* ---------- NAVBAR ------------ */
 nav {
   margin: 30px 120px;
@@ -99,31 +125,8 @@ nav .list .list-item a {
 nav .list .list-item.active a {
   color: #000;
 }
-/* ------------------------------ */
-
-/* ---- GLOBAL section  ------ */
-
-section {
-  padding: 150px 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-section .col {
-  width: 36rem;
-}
-section h1 {
-  font-size: 50px;
-  font-weight: 600;
-}
-section p {
-  margin: 30px 0;
-  font-size: 16px;
-  line-height: 30px;
-  color: #7e7e7f;
-}
-section .img img {
-  width: 35rem;
+nav .menu-icon {
+  display: none;
 }
 /* ------------------------------ */
 
@@ -138,13 +141,14 @@ section .img img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 .services .services-top h1 {
   font-size: 50px;
   font-weight: 600;
 }
 .services .services-top p {
-  width: 60rem;
+  max-width: 60rem;
   font-size: 16px;
   line-height: 30px;
   color: #7e7e7f;
@@ -152,9 +156,7 @@ section .img img {
 .services .services-bottom {
   display: grid;
   grid-template-columns: auto auto auto;
-}
-.services .services-bottom .service {
-  margin: 0 50px 100px 0;
+  gap: 4rem;
 }
 .services .services-bottom .service h2 {
   margin: 20px 0;
@@ -184,6 +186,7 @@ section .img img {
 .pricing .plans {
   margin: 80px 0 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -281,7 +284,7 @@ section .img img {
 }
 .feedback .heading p {
   margin: 30px 0;
-  width: 45rem;
+  max-width: 45rem;
   font-size: 16px;
   text-align: center;
   line-height: 30px;
@@ -345,7 +348,7 @@ section .img img {
   z-index: -1;
 }
 .registration div {
-  width: 36rem;
+  max-width: 36rem;
 }
 .registration div h1 {
   margin: 0 0 25px;
@@ -403,4 +406,224 @@ footer .footer-right .list ul {
 }
 footer .footer-right .list ul li img {
   width: 30px;
+}
+
+/* Responsive Css */
+@media only screen and (max-width: 1024px) {
+  section,
+  .services,
+  .pricing,
+  .feedback,
+  .registration,
+  footer {
+    padding: 50px 5%;
+  }
+  section h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  section p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  section .img img {
+    width: 30rem;
+  }
+  .btn-bordered,
+  .btn {
+    width: 9rem;
+    height: 3rem;
+    font-size: 0.8rem;
+  }
+  nav {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  nav .logo,
+  footer .logo {
+    width: 5rem;
+  }
+  nav .list .list-item a {
+    font-size: 0.8rem;
+  }
+  .services .services-top {
+    padding-top: 50px;
+  }
+  .services .services-top h1 {
+    font-size: 2.3rem;
+  }
+  .pricing .plans {
+    gap: 4rem;
+  }
+  .pricing h1,
+  .feedback .heading h1,
+  .registration div h1 {
+    font-size: 2.5rem;
+  }
+  .footer,
+  .footer-right {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  section p {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
+  section .img img {
+    width: 50vw;
+  }
+  .btn-bordered,
+  .btn {
+    width: 8rem;
+    height: 2.5rem;
+  }
+  nav {
+    align-items: start;
+  }
+  nav .list {
+    display: none;
+  }
+  nav .menu-icon {
+    display: block;
+    font-size: 1.2rem;
+  }
+  .services .services-top {
+    padding-top: 0;
+  }
+  .services .services-top h1 {
+    font-size: 2.3rem;
+  }
+  .services .services-bottom {
+    grid-template-columns: auto auto;
+  }
+  .pricing .plans {
+    gap: 4rem;
+  }
+  .pricing .plans .plan {
+    margin: 0 0px;
+    width: 300px;
+    background: #fff;
+    color: #000;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+  }
+  .pricing .plans .plan h2,
+  .pricing .plans .plan .plan-price div h2 {
+    font-size: 1.5rem;
+  }
+  .pricing .plans .plan p {
+    font-size: 0.8rem;
+  }
+  .pricing .plans .plan .plan-headings {
+    padding: 16px;
+    width: 100%;
+  }
+  .pricing .plans .plan .plan-benefits {
+    margin: 0px 0 0px;
+    padding: 0 29px;
+  }
+  .pricing h1,
+  .feedback .heading h1,
+  .registration div h1 {
+    font-size: 2.5rem;
+  }
+  .feedback .cards {
+    gap: 3rem;
+  }
+  .feedback .cards .card {
+    margin: 0;
+  }
+  .feedback .cards .card .author span {
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+  .registration {
+    gap: 3rem;
+  }
+  .registration div h1 {
+    font-size: 1.8rem;
+  }
+  .registration div p {
+    font-size: 0.8rem;
+  }
+  footer {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  footer .footer-right .list {
+    margin: 0;
+    width: auto;
+  }
+  footer .footer-right {
+    gap: 5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .pricing h1,
+  .feedback .heading h1,
+  .registration div h1 {
+    text-align: center;
+  }
+  section {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  section:nth-child(3) {
+    flex-direction: column;
+  }
+  section .col {
+    max-width: 36rem;
+    padding: 0 10%;
+    text-align: center;
+  }
+
+  .services-top {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services .services-bottom {
+    gap: 2rem;
+  }
+  .feedback .cards {
+    grid-template-columns: auto;
+    gap: 2rem;
+  }
+  .registration {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .registration div h1 {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+  }
+  footer {
+    align-items: center;
+    gap: 4rem;
+  }
+  footer .footer-left {
+    text-align: center;
+  }
+  footer .footer-right {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .services .services-bottom {
+    grid-template-columns: auto;
+  }
+  .registration {
+    overflow: hidden;
+  }
+  .registration img {
+    width: auto;
+    height: 100%;
+  }
 }
